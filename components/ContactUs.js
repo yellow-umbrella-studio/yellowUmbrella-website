@@ -11,7 +11,7 @@ const ContactUs = () => {
         <div className="flex items-center justify-center space-x-2 text-xl text-gray-600">
           <Mail className="text-yellow-500" size={24} />
           <a href="mailto:contact@yellowumbrella.studio" className="hover:underline">
-            contact@yellowumbrella.studio
+            yoni7022@gmail.com
           </a>
         </div>
       </div>
