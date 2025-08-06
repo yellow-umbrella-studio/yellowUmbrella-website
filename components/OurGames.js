@@ -27,7 +27,6 @@ const games = [
     id: 4,
     title: 'Netflix Quiz',
     icon: '/images/netquiz.webp',
-    appStore: null,
     appStore: 'https://apps.apple.com/us/app/netquiz-tv-shows-trivia/id6736584614',
     playStore: 'https://play.google.com/store/apps/details?id=com.yonigold.NetflixQuiz',
   },
@@ -77,9 +76,7 @@ const GameCard = ({ game }) => (
 const OurGames = () => {
   return (
     <div id="games" className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
-     
-  )
-} <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">Our Games</h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>
@@ -101,36 +98,6 @@ const OurGames = () => {
             <div className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce delay-100"></div>
             <div className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce delay-200"></div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default OurGames;
-      {game.appStore && (
-        <a href={game.appStore} target="_blank" rel="noopener noreferrer" className="block">
-          <Image src="/images/appstore.png" alt="Download on the App Store" width={140} height={60} />
-        </a>
-      )}
-      {game.playStore && (
-        <a href={game.playStore} target="_blank" rel="noopener noreferrer" className="block">
-          <Image src="/images/google.png" alt="Get it on Google Play" width={140} height={60} />
-        </a>
-      )}
-    </div>
-  </div>
-);
-
-const OurGames = () => {
-  return (
-    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-extrabold text-center mb-16">OUR GAMES</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Adjusted gap and added more columns for larger screens */}
-          {games.map(game => (
-            <GameCard key={game.id} game={game} />
-          ))}
         </div>
       </div>
     </div>
