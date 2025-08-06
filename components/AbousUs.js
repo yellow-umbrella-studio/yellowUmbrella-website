@@ -58,14 +58,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-          About Us
-        </h2>
-        <p className="text-xl sm:text-2xl text-gray-600">
-          Yellow Umbrella Studio is a passionate team of games and app developers dedicated to fun, educating and innovative mobile games and apps. With our diverse skills and creative mindset, we strive to bring joy and excitement to users around the world through our unique app experiences.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default AboutUs;

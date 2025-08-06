@@ -77,7 +77,9 @@ const GameCard = ({ game }) => (
 const OurGames = () => {
   return (
     <div id="games" className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+     
+  )
+} <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">Our Games</h2>
           <div className="w-24 h-1 bg-yellow-500 mx-auto mb-8"></div>

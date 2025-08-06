@@ -63,17 +63,3 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
-          Contact Us
-        </h2>
-        <div className="flex items-center justify-center space-x-2 text-xl text-gray-600">
-          <Mail className="text-yellow-500" size={24} />
-          <a href="mailto:contact@yellowumbrella.studio" className="hover:underline">
-            yoni7022@gmail.com
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ContactUs;
