@@ -1,48 +1,91 @@
 import React from "react";
 import { Umbrella } from "lucide-react";
-import {
-  Gamepad2,
-  Dice,
-  Trophy,
-  Puzzle,
-  Target,
-  Joystick,
-  Smartphone,
-  Wifi,
-  Clock,
-  Zap,
-  Crown,
-  Heart,
-} from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative bg-gray-900 overflow-hidden h-screen flex items-center justify-center">
-      {/* Background game images */}
+    <header className="bg-slate-900 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <Umbrella className="text-yellow-400" size={32} strokeWidth={2.5} />
+            <span className="text-lg md:text-xl font-bold text-white">
+              Yellow Umbrella
+            </span>
+          </div>
 
-      {/* Content */}
-      <div className="text-center z-10">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl flex items-center justify-center">
-          <Umbrella className="text-yellow-400 mr-4" size={78} />
-          Yellow Umbrella Studio
-        </h1>
+          {/* Navigation */}
+          <nav className="hidden md:flex space-x-6">
+            <button
+              onClick={() => scrollToSection("games")}
+              className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-200"
+            >
+              Our Games
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-200"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-200"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-gray-300 hover:text-yellow-400 font-medium transition-colors duration-200"
+            >
+              Contact
+            </button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button className="md:hidden text-white">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      {/* Curved bottom */}
-      <div className="absolute bottom-0 inset-x-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-          className="w-full"
-        >
-          <path
-            fill="#ffffff"
-            fillOpacity="1"
-            d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,224C672,213,768,171,864,149.3C960,128,1056,128,1152,149.3C1248,171,1344,213,1392,234.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          ></path>
-        </svg>
+      {/* Hero Banner Section */}
+      <div className="bg-slate-900 py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white fade-in-up">
+            YELLOW UMBRELLA
+          </h1>
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4 text-white fade-in-up">
+            STUDIOS
+          </h1>
+          {/* <p
+            className="text-lg md:text-xl text-gray-400 font-normal fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
+            STUDIOS
+          </p> */}
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
